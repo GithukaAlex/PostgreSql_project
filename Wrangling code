@@ -1,8 +1,13 @@
 -- 1. What are the names of the players whose salary is greater than 100,000?
-select player_name from players where salary > 100000
+select player_name 
+from players 
+where salary > 100000
 
 -- 2. What is the team name of the player with player_id = 3?
-select team_name from teams t left join players p on t.team_id = p.team_id where player_id = 3
+select team_name 
+from teams t 
+left join players p on t.team_id = p.team_id 
+Where player_id = 3
 
 -- 3. What is the total number of players in each team?
 select team_id, count(player_id) from players group by team_id
